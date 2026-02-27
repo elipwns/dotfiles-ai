@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "3d-printer": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "-e", "PRINTER_TYPE=bambu",
+        "-e", "PRINTER_HOST=<printer-local-ip>",
+        "-e", "BAMBU_SERIAL=<serial-from-bambu-studio>",
+        "-e", "BAMBU_TOKEN=<lan-access-code-from-printer-settings>",
+        "mcp/3d-printer"
+      ]
+    }
+  }
+}
