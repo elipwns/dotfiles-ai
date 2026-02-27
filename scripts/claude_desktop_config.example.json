@@ -1,15 +1,17 @@
 {
   "mcpServers": {
+    "docker": {
+      "command": "C:\\Program Files\\Docker\\cli-plugins\\docker-mcp.exe",
+      "args": ["gateway", "run"]
+    },
     "3d-printer": {
-      "command": "docker",
-      "args": [
-        "run", "-i", "--rm",
-        "-e", "PRINTER_TYPE=bambu",
-        "-e", "PRINTER_HOST=<printer-local-ip>",
-        "-e", "BAMBU_SERIAL=<serial-from-bambu-studio>",
-        "-e", "BAMBU_TOKEN=<lan-access-code-from-printer-settings>",
-        "mcp/3d-printer"
-      ]
+      "command": "python",
+      "args": ["C:\\Users\\<username>\\Documents\\GitHub\\bambu-mcp-server\\bambu_lab_mcp.py"],
+      "env": {
+        "BAMBU_PRINTER_IP": "<printer-local-ip>",
+        "BAMBU_ACCESS_CODE": "<lan-access-code-from-printer-settings>",
+        "BAMBU_SERIAL_NUMBER": "<serial-from-bambu-studio>"
+      }
     }
   }
 }
