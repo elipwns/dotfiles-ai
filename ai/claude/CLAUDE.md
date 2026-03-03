@@ -9,11 +9,7 @@
 
 ## AWS & Infrastructure
 - Prefer Terraform for AWS resource creation and management
-- Always use `default_tags` in the AWS provider — see [TAGGING-STANDARD.md](https://github.com/elipwns/dotfiles-ai/blob/main/standards/TAGGING-STANDARD.md)
-- Required tags: `ManagedBy = "Terraform"`, `Project`, `TerraformRepo`
-- Use IAM roles/users with least privilege
-- Use AWS Secrets Manager for credentials, never hardcode them
-- IAM changes go through the `aws-iam-management` repo via Terraform
+- See `terraform-aws` skill for tagging, profile, and IAM rules
 
 ## Coding Style
 - Write clean, readable code with minimal comments — code should be self-documenting
@@ -30,12 +26,16 @@
 
 ## Communication
 - Be concise — short responses unless detail is needed
-- Suggest better alternatives when relevant, but don't be preachy about it
+- Proactively flag when a better approach exists — newer tooling, industry standard patterns, or recent updates that simplify what's being asked. One sentence is enough; don't lecture.
 - Always review plans before taking irreversible actions
-- Offer to write git commit messages
+
+## Git Workflow
+- See `git-pr-workflow` skill for branching, commit, and PR conventions
+
+## Repository Documentation Standard
+- See `repo-docs-standard` skill for required files and maintenance rules
 
 ## Project Maintenance
-- Update README when adding or removing features
 - Remove unused imports and dependencies when deleting features
 - Clean up config files when removing features
 - Keep consistent folder structure across similar projects
