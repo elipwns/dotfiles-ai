@@ -6,10 +6,15 @@
 - GitHub account: elipwns, uses SSH
 - AWS default profile: `dev-workstation` (set via `AWS_DEFAULT_PROFILE` in `.bashrc`)
 - AWS terraform profile: `terraform` (used for IaC work)
+- Hardware: RTX 5090, AMD 9800X3D, 128GB RAM, 2.5Gbps internet — no constraints on heavy local workloads
 
 ## AWS & Infrastructure
 - Prefer Terraform for AWS resource creation and management
+- Prefer managed services over self-hosted solutions
 - See `terraform-aws` skill for tagging, profile, and IAM rules
+
+## Tooling
+- Prefer Docker over manual environment setup for dev dependencies and services
 
 ## Coding Style
 - Write clean, readable code with minimal comments — code should be self-documenting
