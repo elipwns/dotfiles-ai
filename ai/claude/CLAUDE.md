@@ -6,14 +6,15 @@
 - GitHub account: elipwns, uses SSH
 - AWS default profile: `dev-workstation` (set via `AWS_DEFAULT_PROFILE` in `.bashrc`)
 - AWS terraform profile: `terraform` (used for IaC work)
+- Hardware: RTX 5090, AMD 9800X3D, 128GB RAM, 2.5Gbps internet — no constraints on heavy local workloads
 
 ## AWS & Infrastructure
 - Prefer Terraform for AWS resource creation and management
-- Always use `default_tags` in the AWS provider — see [TAGGING-STANDARD.md](https://github.com/elipwns/dotfiles-ai/blob/main/standards/TAGGING-STANDARD.md)
-- Required tags: `ManagedBy = "Terraform"`, `Project`, `TerraformRepo`
-- Use IAM roles/users with least privilege
-- Use AWS Secrets Manager for credentials, never hardcode them
-- IAM changes go through the `aws-iam-management` repo via Terraform
+- Prefer managed services over self-hosted solutions
+- See `terraform-aws` skill for tagging, profile, and IAM rules
+
+## Tooling
+- Prefer Docker over manual environment setup for dev dependencies and services
 
 ## Coding Style
 - Write clean, readable code with minimal comments — code should be self-documenting
@@ -30,12 +31,16 @@
 
 ## Communication
 - Be concise — short responses unless detail is needed
-- Suggest better alternatives when relevant, but don't be preachy about it
+- Proactively flag when a better approach exists — newer tooling, industry standard patterns, or recent updates that simplify what's being asked. One sentence is enough; don't lecture.
 - Always review plans before taking irreversible actions
-- Offer to write git commit messages
+
+## Git Workflow
+- See `git-pr-workflow` skill for branching, commit, and PR conventions
+
+## Repository Documentation Standard
+- See `repo-docs-standard` skill for required files and maintenance rules
 
 ## Project Maintenance
-- Update README when adding or removing features
 - Remove unused imports and dependencies when deleting features
 - Clean up config files when removing features
 - Keep consistent folder structure across similar projects
